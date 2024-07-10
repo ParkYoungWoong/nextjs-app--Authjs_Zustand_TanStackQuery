@@ -21,6 +21,7 @@ export default async function Header() {
         {session?.user ? (
           <>
             <Link href="/myaccount">내 정보 수정</Link>
+            <Link href="/users">모든 사용자 보기</Link>
             <div style={{ flexGrow: '1' }}></div>
             <Theme key="theme" />
             <form
