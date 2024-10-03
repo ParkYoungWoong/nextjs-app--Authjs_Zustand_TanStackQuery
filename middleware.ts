@@ -4,8 +4,8 @@ import { match } from 'path-to-regexp'
 // import { getSession } from '@/serverActions/auth'
 import { authorizeUser } from '@/serverActions/user'
 
-const matchersForAuth = ['/myaccount/:path*', '/users/:path*']
-const matchersForSignIn = ['/signup/:path*', '/signin/:path*']
+const matchersForAuth = ['/myaccount/:path', '/users/:path']
+const matchersForSignIn = ['/signup/:path', '/signin/:path']
 
 export async function middleware(request: NextRequest) {
   if (isMatch(request.nextUrl.pathname, matchersForAuth)) {
